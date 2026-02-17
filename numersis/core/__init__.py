@@ -1,20 +1,9 @@
 """
-Numersis: A comprehensive numerical analysis library.
-
-This library provides implementations of common numerical methods for:
-- Root finding
-- Interpolation
-- Numerical integration
-- Numerical differentiation
-- Solving ordinary differential equations
-- Linear algebra and matrix factorization
+Core numerical methods module for Numersis library.
 """
 
-__version__ = "0.1.0"
-
-# Import all core methods for easy access
-from .core import (
-    # Base classes
+# Base classes
+from .base import (
     NumericalMethod,
     RootFinder,
     Interpolator,
@@ -23,23 +12,35 @@ from .core import (
     ODESolver,
     LinearSolver,
     MatrixFactorization,
-    # Root finding
+)
+
+# Root finding methods
+from .root_finding import (
     BisectionMethod,
     FixedPointMethod,
     NewtonRaphsonMethod,
     FalsePositionMethod,
     MullersMethod,
-    # Interpolation
+)
+
+# Interpolation methods
+from .interpolation import (
     LagrangePolynomial,
     NewtonDividedDifference,
     ClampedCubicSpline,
-    # Integration
+)
+
+# Integration methods
+from .integration import (
     CompositeSimpsonRule,
     RombergIntegration,
     GaussianQuadrature,
     AdaptiveQuadrature,
     SimpsonsDoubleIntegral,
-    # Differentiation and ODE
+)
+
+# Differentiation methods
+from .ode_solvers import (
     ThreePointMidpointFormula,
     ThreePointEndpointFormula,
     FivePointFormula,
@@ -47,7 +48,10 @@ from .core import (
     HigherOrderTaylorMethod,
     RungeKutta4,
     AdamsFourthOrderPredictorCorrector,
-    # Linear algebra
+)
+
+# Linear algebra methods
+from .linear_algebra import (
     LUFactorization,
     CholeskyFactorization,
     LDLtFactorization,
